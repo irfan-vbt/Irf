@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GHS Varambetta - Groups</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      margin: 0;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    h2 {
+      color: #4caf50;
+    }
+
+    .group-link, .back-link {
+      display: block;
+      margin: 15px auto;
+      padding: 15px;
+      width: 220px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .group-link:hover, .back-link:hover {
+      background-color: #dfe6e9;
+    }
+
+    .group-page {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background: #f1f1f1;
+      margin: 10px;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .group-link, .back-link {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Home Page -->
+  <div id="home">
+    <h1>GHS Varambetta - Group Project</h1>
+    <h2>Created by Irfan</h2>
+
+    <button class="group-link" onclick="showGroup(1)">Group 1: Akhina</button>
+    <button class="group-link" onclick="showGroup(2)">Group 2: Febin</button>
+    <button class="group-link" onclick="showGroup(3)">Group 3: Irfan</button>
+    <button class="group-link" onclick="showGroup(4)">Group 4: Mishab</button>
+  </div>
+
+  <!-- Group Pages -->
+  <div id="group1" class="group-page">
+    <h1>Group 1: Akhina</h1>
+    <p>Group Leader: Akhina</p>
+    <ul>
+      <li>Akhinna</li>
+      <li>Vajid</li>
+      <li>Nousiyq</li>
+      <li>Ananya</li>
+      <li>Avani</li>
+      <li>Diya</li>
+      <li>Lubaba</li>
+      <li>Safa</li>
+    </ul>
+    <button class="back-link" onclick="goHome()">Back to Main Page</button>
+  </div>
+
+  <div id="group2" class="group-page">
+    <h1>Group 2: Febin</h1>
+    <p>Group Leader: Febin</p>
+    <ul>
+      <li>Febin</li>
+      <li>Nabil</li>
+      <li>Shadil</li>
+      <li>Farhan</li>
+      <li>Nahitha</li>
+      <li>Liba</li>
+      <li>Risa</li>
+      <li>Sana</li>
+    </ul>
+    <button class="back-link" onclick="goHome()">Back to Main Page</button>
+  </div>
+
+  <div id="group3" class="group-page">
+    <h1>Group 3: Irfan</h1>
+    <p>Group Leader: Irfan</p>
+    <ul>
+      <li>Irfan</li>
+      <li>Aflah</li>
+      <li>Athil</li>
+      <li>Midlaj</li>
+      <li>Najma</li>
+      <li>Shahala</li>
+      <li>Siya</li>
+      <li>Shidila</li>
+    </ul>
+    <button class="back-link" onclick="goHome()">Back to Main Page</button>
+  </div>
+
+  <div id="group4" class="group-page">
+    <h1>Group 4: Mishab</h1>
+    <p>Group Leader: Mishab</p>
+    <ul>
+      <li>Mishab</li>
+      <li>Nihal</li>
+      <li>Nishal</li>
+      <li>Sahal</li>
+      <li>Naseef</li>
+      <li>Sreya</li>
+      <li>Swathika</li>
+      <li>Pa shadil</li>
+    </ul>
+    <button class="back-link" onclick="goHome()">Back to Main Page</button>
+  </div>
+
+  <script>
+    function showGroup(num) {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("group" + num).style.display = "block";
+    }
+
+    function goHome() {
+      document.getElementById("home").style.display = "block";
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById("group" + i).style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
